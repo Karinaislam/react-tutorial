@@ -1,0 +1,21 @@
+.grad {
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(to bottom right, #000000, #bcbaba);
+  }
+
+  .headLine{
+      position: relative;
+      top: 300px;
+      left: 10px;
+      font-size: 25px;
+      font-weight: bold;
+
+  }
+
+  .signUp{
+    position: relative;
+    top: 300px;
+    left: 10px;
+
+  }

@@ -1,0 +1,14 @@
+.sideNav{
+    width: 30%;
+    position: relative;
+    right: 0px;
+    background: grey;
+}
+
+li{
+    list-style: none;
+
+    text-align: right;
+
+    padding: 10px 30px 10px 10px;
+}
