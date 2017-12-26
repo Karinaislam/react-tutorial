@@ -3,6 +3,7 @@ import "./Header.css"
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
 
 
 const style = {
@@ -47,16 +48,21 @@ class Header extends Component {
                 <div className ="grad">
                     <p className="headLine">Become a Front-End Developer</p>
                     <RaisedButton  onClick={this.handleOpen} className="signUp" label="SignUp" primary={true}  />
+                    
                     <Dialog
-          title="Dialog With Actions"
-          actions={actions}
-          modal={false}
-          open={this.state.open}
-          onRequestClose={this.handleClose}
-        >
-          The actions in this window were passed in as an array of React objects.
-        </Dialog>
-                </div>
+                        title="New to this website?"
+                        actions={actions}
+                        modal={false}
+                        open={this.state.open}
+                        onRequestClose={this.handleClose}
+                    >
+                        <TextField hintText="Email"/><br /><br />
+                        <TextField hintText="Password"/><br /><br />
+                        <FlatButton label="Log In" primary={true} />
+                        <FlatButton label="Sign Up" secondary={true} />
+                        <FlatButton label="Log Out" disabled={true} />
+                    </Dialog>
+                           </div>
             </div>
         );
     }
