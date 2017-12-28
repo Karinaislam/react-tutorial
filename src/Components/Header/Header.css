@@ -1,21 +1,23 @@
 .grad {
-    height: 400px;
+    height: 300px;
     width: 100%;
-    background: linear-gradient(to bottom right, #000000, #bcbaba);
+    background-image: url('../images/curve-simplicity.jpg');
   }
 
   .headLine{
+    font-family: 'Nunito', sans-serif;
+    color: white;
       position: relative;
-      top: 300px;
-      left: 10px;
-      font-size: 25px;
+      top: 125px;
+      left: 0px;
+      font-size: 30px;
       font-weight: bold;
 
   }
 
   .signUp{
     position: relative;
-    top: 300px;
-    left: 10px;
+    top: 125px;
+    left: 0px;
 
   }
