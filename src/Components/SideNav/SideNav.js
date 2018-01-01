@@ -25,22 +25,21 @@ class SideNav extends Component {
     render() {
         return (
             <div>
-                <FontIcon className="material-icons" style={iconStyles} onClick={this.handleToggle}>menu</FontIcon>
-                 <Drawer
-                    className="drawer"
-                    docked={false}
-                    width={300}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
-                    >
-                                
-                    <MenuItem  onClick={this.handleClose}>Tutorials</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Blogs</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Podcast</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Open Forum</MenuItem>
-                </Drawer>
-                  
-            </div>
+            <FontIcon className="material-icons" style={iconStyles} onClick={this.handleToggle}>menu</FontIcon>
+            <Drawer 
+                open={this.state.open} width={300}
+                docked={false}
+                onRequestChange={(open) => this.setState({open})}
+                >
+                <div className="drawer">
+                </div>
+                <MenuItem  onClick={this.handleClose}>Tutorials</MenuItem>
+                <MenuItem onClick={this.handleClose}>Blogs</MenuItem>
+                <MenuItem onClick={this.handleClose}>Podcast</MenuItem>
+                <MenuItem onClick={this.handleClose}>Open Forum</MenuItem>
+            </Drawer>
+          </div>
+            
         );
     }
 }
