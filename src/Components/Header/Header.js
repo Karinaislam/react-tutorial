@@ -42,7 +42,7 @@ class Header extends Component {
             that.setState({
                 userName: user.displayName,
                 userEmail:user.email, 
-                userToken:user.emailVerified
+                userToken:user.uid
             })
           }).catch(function(error) {
             var errorCode = error.code;
@@ -69,7 +69,7 @@ class Header extends Component {
             that.setState({
                 userName: user.displayName,
                 userEmail:user.email, 
-                userToken:user.emailVerified
+                userToken:user.uid
             })
             // ...
           }).catch(function(error) {
@@ -86,8 +86,9 @@ class Header extends Component {
       }
 
       authTwitter = () =>{
-        console.log('in twitter');
-         const provider = new firebase.auth.TwitterAuthProvider();
+        const that = this;
+        this.setState({open:false});
+        const provider = new firebase.auth.TwitterAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
             // You can use these server side with your app's credentials to access the Twitter API.
@@ -95,6 +96,12 @@ class Header extends Component {
             var secret = result.credential.secret;
             // The signed-in user info.
             var user = result.user;
+            console.log(user);
+            that.setState({
+                userName: user.displayName,
+                userEmail:user.email, 
+                userToken:user.uid
+            })
             // ...
           }).catch(function(error) {
             // Handle Errors here.
@@ -110,25 +117,7 @@ class Header extends Component {
       }
 
 
-      authFacebook= () =>{
-        var provider = new firebase.auth.FacebookAuthProvider();
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
-            // ...
-          }).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
-          });
-      }
+     
 
 
 
@@ -165,7 +154,7 @@ class Header extends Component {
                         <FlatButton label="Google" onClick={this.authGoogle} primary={true} />
                         <FlatButton label="GitHub" onClick={this.authGitHub} primary={true} />
                         <FlatButton label="Twitter" onClick={this.authTwitter} secondary={true} />
-                        <FlatButton label="Facebook" onClick={this.authFacebook} primary={true} />
+                        
                     </Dialog>
                            </div>
             </div>
