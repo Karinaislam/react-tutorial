@@ -8,9 +8,9 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header></Header>
-        <SideNav></SideNav>
-        <MainBody></MainBody>
+            <Header></Header>
+            <SideNav></SideNav>
+            <MainBody></MainBody>
             </div>
         );
     }

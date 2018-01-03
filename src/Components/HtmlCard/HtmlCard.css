@@ -1,0 +1,33 @@
+.card1{
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(241, 101, 41, 0.29);
+    height: 200px;
+    width: 60%;
+    margin: 40px auto ;
+    
+}
+
+.htmlImage{
+    margin-top: 15px;
+    height: 175px;
+    width: 75%;
+    
+}
+
+.HeadingHtmlCard{
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.htmlImageDiv{
+    height: 200px;
+    width: 50%;
+    text-align: center;
+}
+
+.htmlDescriptionDiv{
+    padding: 0px 15px;
+    text-align: center;
+}

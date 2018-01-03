@@ -1,23 +1,27 @@
 .grad {
+    /* display: flex;
+    flex-direction: column; */
+    text-align: center;
     height: 300px;
     width: 100%;
     background-image: url('../images/curve-simplicity.jpg');
   }
 
   .headLine{
+ 
     font-family: 'Nunito', sans-serif;
     color: white;
       position: relative;
-      top: 125px;
-      left: 0px;
+     top: 50%;
+    
+      transform: translateY(-50%);
       font-size: 30px;
       font-weight: bold;
 
   }
 
   .signUp{
+    margin-top: 5px;
     position: relative;
-    top: 125px;
-    left: 0px;
-
+    top: 100px;
   }
