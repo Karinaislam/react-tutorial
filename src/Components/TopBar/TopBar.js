@@ -34,7 +34,7 @@ class TopBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="topBar">
          <AppBar
     title={<span className= "title"style={styles.title}>Front-End Developer Guide</span>}
     onTitleClick={handleClick}

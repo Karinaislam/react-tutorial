@@ -1,6 +1,7 @@
 .grad {
     /* display: flex;
     flex-direction: column; */
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
     text-align: center;
     height: 300px;
     width: 100%;
