@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './JsCard.css';
 import css3 from '../../images/js.png';
 import RaisedButton from 'material-ui/RaisedButton';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class JsCard extends Component {
     render() {
@@ -18,9 +18,9 @@ class JsCard extends Component {
                     <p className="HeadingJsCard">JavaScript</p>
                     <p>JavaScript is used to define the interactive 
                         elements of a webpage that help to engage users</p>
-                        {/* <Link to="/html"> */}
+                        <Link to="/js">
                     <RaisedButton label="Learn JavaScript" secondary={true}  />
-                {/* </Link> */}
+                </Link>
                 </div>
 
                 

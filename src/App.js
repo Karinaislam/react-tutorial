@@ -12,6 +12,8 @@ import {
 import TopBar from "./Components/TopBar/TopBar.js";
 import Home from './Components/Home/Home';
 import Html from './Components/Html/Html';
+import CssMainPage from './Components/CssMainPage/CssMainPage';
+import JSMainPage from './Components/JSMainPage/JSMainPage';
 
 class App extends Component {
   render() {
@@ -22,6 +24,8 @@ class App extends Component {
           <Switch>
           <Route exact path="/" component={Home}></Route>
             <Route path="/html" component={Html}></Route>
+            <Route path="/css" component={CssMainPage}></Route>
+            <Route path="/js" component={JSMainPage}></Route>
           </Switch>
           </Router> 
       </div>

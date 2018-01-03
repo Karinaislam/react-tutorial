@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './CssCard.css';
 import css3 from '../../images/css3.png';
 import RaisedButton from 'material-ui/RaisedButton';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class CssCard extends Component {
     render() {
@@ -18,9 +18,9 @@ class CssCard extends Component {
                     <p className="HeadingCssCard">CSS</p>
                     <p>CSS, or Cascading Style Sheets, is used for the design of
                          a webpage – where everything is placed and how it looks</p>
-                         {/* <Link to="/html"> */}
+                         <Link to="/css">
                     <RaisedButton label="Learn CSS" secondary={true}  />
-                {/* </Link> */}
+                </Link>
                 </div>
 
                 

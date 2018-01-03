@@ -25,3 +25,10 @@
     position: relative;
     top: 100px;
   }
+
+  .authButtons{
+    display: flex;
+    flex-direction: column; 
+  }
+
+  

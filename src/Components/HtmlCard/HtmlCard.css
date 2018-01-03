@@ -2,32 +2,32 @@
     display: flex;
     font-family: 'Nunito', sans-serif;
     background-color: rgba(241, 101, 41, 0.29);
-    height: 200px;
+    height: 300px;
     width: 60%;
     margin: 40px auto ;
     
 }
 
 .htmlImage{
-    margin-top: 15px;
-    height: 175px;
-    width: 75%;
+    margin-top: 25px;
+    height: 250px;
+    width: 85%;
     
 }
 
 .HeadingHtmlCard{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
 
 }
 
 .htmlImageDiv{
-    height: 200px;
+    height: 300px;
     width: 50%;
     text-align: center;
 }
 
 .htmlDescriptionDiv{
-    padding: 0px 15px;
+    padding: 0px 25px 0px 15px;
     text-align: center;
 }

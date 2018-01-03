@@ -2,34 +2,34 @@
     display: flex;
     font-family: 'Nunito', sans-serif;
     background-color: rgba(255, 222, 82, 0.38);
-    height: 200px;
+    height: 300px;
     width: 60%;
     margin: 40px auto ;
     
 }
 
 .jsImageDiv{
-    height: 200px;
+    height: 300px;
     width: 50%;
     text-align: center;
 }
 
 .jsImage{
     margin-top: 15px;
-    height: 175px;
+    height: 275px;
     width: 85%;
     
 }
 
 .HeadingJsCard{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
 
 }
 
 
 .jsDescriptionDiv{
-    padding: 0px 15px;
+    padding:0px 25px 0px 15px;
     text-align: center;
 }
 

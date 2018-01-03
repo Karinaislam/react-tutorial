@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
-import "./Header.css"
+import "./Header.css";
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import firebase from 'firebase';
+import FontIcon from 'material-ui/FontIcon';
 
-const style = {
+const styles = {
     margin: 1,
+    
+
+    button: {
+        margin: 12,
+        
+      },
+      exampleImageInput: {
+        cursor: 'pointer',
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        right: 0,
+        left: 0,
+        width: '100%',
+        opacity: 0,
+      },
   };
 
 
@@ -145,16 +162,27 @@ class Header extends Component {
                     <RaisedButton  onClick={this.handleOpen} className="signUp" label="SignUp" primary={true}  />
                     
                     <Dialog
-                        title="New to this website?"
+                        title="Sign In"
                         actions={actions}
                         modal={false}
                         open={this.state.open}
                         onRequestClose={this.handleClose}
+                        titleStyle={{textAlign: "center"}}
                     >
+                    <div className="authButtons">
+                        
                         <FlatButton label="Google" onClick={this.authGoogle} primary={true} />
                         <FlatButton label="GitHub" onClick={this.authGitHub} primary={true} />
                         <FlatButton label="Twitter" onClick={this.authTwitter} secondary={true} />
-                        
+                        <RaisedButton
+                            href="https://github.com/callemall/material-ui"
+                            target="_blank"
+                            label="Github Link"
+                            primary={true}
+                            style={styles.button}
+                            icon={<FontIcon className="material-icons"> </FontIcon>}
+                            />
+                        </div>
                     </Dialog>
                            </div>
             </div>
