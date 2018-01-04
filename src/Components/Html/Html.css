@@ -1,3 +1,49 @@
 .htmlMainPageContent{
-    top: 70px;
+    margin-top: 70px;
+    font-family: 'Roboto', sans-serif; 
+   
 }
+
+.intro{
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 60px;
+   
+}
+
+
+
+.learnList li{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 5px;
+    text-align: left !important;
+    list-style-type: square;
+}
+
+
+.htmlhead {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00bcd4;
+
+
+ }
+
+ .sectionCard{
+    padding: 20px 0px;
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ .Iframe{
+    
+   padding: 30px; 
+ }
