@@ -1,8 +1,133 @@
 import React, { Component } from 'react';
 import './CssMainPage.css';
+import RaisedButton from 'material-ui/RaisedButton';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import firebase from 'firebase';
+import {Link} from 'react-router-dom';
+
+
+const styles = {
+    margin: 12,
+    horizontalAlign: 'middle',
+    block: {
+      maxWidth: 250,
+    },
+    radioButton: {
+      marginBottom: 16,
+    },
+  
+  };
+  
 
 class CssMainPage extends Component {
+
+    state = {
+        open: false,
+        q1Answer:undefined,
+        q2Answer:undefined,
+        q3Answer:undefined,
+        q4Answer:undefined,
+        q5Answer:undefined,
+        wrongAnswers: false
+      };
+    
+      handleOpen = () => {
+        this.setState({open: true});
+      };
+    
+      handleClose = () => {
+        this.setState({open: false});
+      };
+
+      displayResult = () =>{
+          console.log(this.state.wrongAnswers);
+        if(this.state.wrongAnswers.length > 0){
+            console.log(this.state.wrongAnswers);
+        }else {
+            console.log('congratulate');
+        }
+      }
+
+      handleSubmit =() =>{
+        var database = firebase.database();
+        var userId = firebase.auth().currentUser.uid;
+        var that = this;
+        return firebase.database().ref('/answers/').once('value').then(function(snapshot) {
+          var answers  = snapshot.val();
+          var wrongAnswers = [];
+          for(var i = 1; i <=5; i++){
+              if(answers['q'+i] != that.state['q'+i+'Answer']){
+                 wrongAnswers.push(i);
+              }
+          }
+          that.setState({
+              wrongAnswers: wrongAnswers
+          });
+          that.displayResult();
+        });
+      }
+
+      handleHtmlQues1 = (e,value) => 
+      {
+        this.setState({
+            q1Answer: value
+        });
+      
+      };
+
+      handleHtmlQues2 = (e,value) => 
+      {
+          this.setState({
+              q2Answer: value
+          });
+      
+      };
+
+      handleHtmlQues3 = (e,value) => 
+      {
+        this.setState({
+            q3Answer: value
+        });
+      
+      };
+
+      handleHtmlQues4 = (e,value) => 
+      {
+        this.setState({
+            q4Answer: value
+        });
+      
+      };
+
+      handleHtmlQues5 = (e,value) => 
+      {
+        this.setState({
+            q5Answer: value
+        });
+      };
+
+
+
+
+
     render() {
+
+        const actions = [
+            <FlatButton
+            label="Cancel"
+            primary={true}
+            onClick={this.handleClose}
+          />,
+          <FlatButton
+            label="Submit"
+            primary={true}
+            keyboardFocused={true}
+            onClick={this.handleSubmit}
+          />,
+        ];
+
         return (
             <div>
                 <div className="cssMainPageContent">
@@ -22,29 +147,53 @@ class CssMainPage extends Component {
                 <p>The biggest key to understanding CSS is understanding selectors. Selectors are what allows you
                       to target specific HTML elements and apply style to them. Learn CSS to develop your website in simple and
                      easy steps starting from basic to advanced concepts with examples including  colors, layout, and fonts etc.</p>
-                    <div className="Iframe">
-                     <iframe  width="560" height="315" src="https://www.youtube.com/embed/Y1BlT4_c_SU" frameborder="0"
-                      gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                     
+                     <p>Step 1: Complete this 1 hour basic HTML crash course to have a kickass start.</p>
+                     
 
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/cZCq8lQ-vZ0" frameborder="0"
-                       gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <div className="Iframe">
 
-                       <iframe width="560" height="315" src="https://www.youtube.com/embed/IJWcX2EDAKg" frameborder="0"
-                        gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" 
+                gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MnaKa7igX7k" frameborder="0"
-                         gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <p> Step 2: Give a small quize of 5 questions and check your learing level.</p>
 
-                         <iframe width="560" height="315" src="https://www.youtube.com/embed/mNRzWMH5xK0" frameborder="0" 
-                         gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                
 
-                         <iframe width="560" height="315" src="https://www.youtube.com/embed/mNRzWMH5xK0" frameborder="0"
-                          gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <div>
+                <Link to="/htmlQuiz1">
+                <RaisedButton className="quiz" label="Quiz" primary={true}  onClick={this.handleOpen} />
+                </Link>
+                
+                        
+                </div>
+                
 
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/UWdepvkLE8U" frameborder="0"
-                          gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 
+
+                <p>Step 3: Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/I9XRrlOOazo" frameborder="0" 
+                gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7ZXsPj43heo" frameborder="0" 
+                gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y8zMYaD1bz0" frameborder="0" 
+                gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jgw82b5Y2MU" frameborder="0" 
+                gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+
+                <p> Step 4: Give a small quize of 5 questions and check your learing level.</p>                          
+
+                <RaisedButton className="quiz" label="Quiz" primary={true} />
+
+
+                </div>  
                     </div>  
                 </div>
 
@@ -59,7 +208,7 @@ class CssMainPage extends Component {
                 
             </div>
             
-            </div>
+            
             </div>
         );
     }
