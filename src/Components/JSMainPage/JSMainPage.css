@@ -34,8 +34,8 @@
 
  .Iframe{
     padding: 30px;
-     /* display: flex;
-     flex-wrap: wrap; */
+     display: flex;
+     flex-wrap: wrap;
     
  }
 
