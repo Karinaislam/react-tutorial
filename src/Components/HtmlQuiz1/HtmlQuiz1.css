@@ -1,0 +1,44 @@
+.htmlQuiz1MainPage{
+    margin-top: 70px;
+    font-family: 'Roboto', sans-serif; 
+   ;
+}
+
+
+
+.quizHead {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00bcd4;
+  
+
+
+
+ }
+
+
+.questionContainer{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 60px;
+}
+
+.submitButton{
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color:#00bcd4; 
+}

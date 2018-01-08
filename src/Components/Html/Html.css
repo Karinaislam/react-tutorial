@@ -4,7 +4,7 @@
    
 }
 
-.intro{
+.introHtml{
     margin-left: auto;
     margin-right: auto;
     width: 65%;
@@ -35,7 +35,7 @@
 
  }
 
- .sectionCard{
+ .sectionCardHtml{
     padding: 20px 0px;
  }
 
@@ -44,6 +44,25 @@
  }
 
  .Iframe{
+    padding: 30px;
+     display: flex;
+     flex-direction: column;
     
-   padding: 30px; 
+    
  }
+
+ iframe{
+     padding: 20px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    
+
+ }
+
+ .quiz {
+     width: 20%;
+     
+     text-align: center !important;
+ }
+

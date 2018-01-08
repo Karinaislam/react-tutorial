@@ -47,8 +47,18 @@ class Header extends Component {
         this.setState({open: false});
       };
 
+      logUserLogin = () =>{
+        const loggedInd = new Date().toString();
+        firebase.database().ref('login').set({
+            username: this.state.userName,
+            email: this.state.userEmail,
+            loggedIn:loggedInd
+        }).catch(function(error){
+            console.log('error happened', error);
+        });
+      }
+
       authGoogle = () =>{
-        console.log('inside111');
         const that = this;
         this.setState({open:false});
         const provider = new firebase.auth.GoogleAuthProvider();
@@ -61,6 +71,7 @@ class Header extends Component {
                 userEmail:user.email, 
                 userToken:user.uid
             })
+            that.logUserLogin();
           }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -82,12 +93,11 @@ class Header extends Component {
             console.log('getting there');
             // The signed-in user info.
             var user = result.user;
-            console.log(user, 'inside github');
             that.setState({
                 userName: user.displayName,
                 userEmail:user.email, 
                 userToken:user.uid
-            })
+            });
             // ...
           }).catch(function(error) {
             console.log('github error', error);
@@ -118,7 +128,7 @@ class Header extends Component {
                 userName: user.displayName,
                 userEmail:user.email, 
                 userToken:user.uid
-            })
+            });
             // ...
           }).catch(function(error) {
             // Handle Errors here.
