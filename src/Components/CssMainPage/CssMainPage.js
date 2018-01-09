@@ -186,19 +186,36 @@ class CssMainPage extends Component {
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jgw82b5Y2MU" frameborder="0" 
                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B9OZkATMbag" frameborder="0" 
+                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w" frameborder="0"
+                  gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
 
 
                 <p> Step 4: Give a small quize of 5 questions and check your learing level.</p>                          
 
                 <RaisedButton className="quiz" label="Quiz" primary={true} />
 
+                <div className="sectionCard">
+                <p className="htmlhead">Learn Framework</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5GcQtLDGXy8" frameborder="0"
+                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+              
+
+
+                
+
 
                 </div>  
                     </div>  
                 </div>
 
-                <div className="sectionCard">
-                <p className="htmlhead"></p>
+                
+
                 <p></p>
                 </div>
 
