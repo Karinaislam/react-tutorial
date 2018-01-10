@@ -4,6 +4,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import FontIcon from 'material-ui/FontIcon';
+import {Link} from 'react-router-dom';
 
 const iconStyles = {
     marginRight: 24,
@@ -33,10 +34,12 @@ class SideNav extends Component {
                 >
                 <div className="drawer">
                 </div>
-                <MenuItem  onClick={this.handleClose}>Tutorials</MenuItem>
-                <MenuItem onClick={this.handleClose}>Blogs</MenuItem>
-                <MenuItem onClick={this.handleClose}>Podcast</MenuItem>
-                <MenuItem onClick={this.handleClose}>Open Forum</MenuItem>
+            <MenuItem href="/totalGuide" onClick={this.handleClose}>Total Guide</MenuItem>
+               <MenuItem  href="/home" onClick={this.handleClose}> Home</MenuItem> 
+                <MenuItem href="/html" onClick={this.handleClose}>HTML</MenuItem>
+                <MenuItem href="/css" onClick={this.handleClose}>CSS</MenuItem>
+                <MenuItem href="/js" onClick={this.handleClose}>JavaScript</MenuItem>
+                <MenuItem href="/home" onClick={this.handleClose}>Blogs</MenuItem>
             </Drawer>
           </div>
             

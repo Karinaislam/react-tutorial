@@ -16,6 +16,7 @@ import CssMainPage from './Components/CssMainPage/CssMainPage';
 import JSMainPage from './Components/JSMainPage/JSMainPage';
 import HtmlQuiz1 from './Components/HtmlQuiz1/HtmlQuiz1';
 import SignInPage from './Components/SignInPage/SignInPage';
+import TotalGuide from './Components/TotalGuide/TotalGuide';
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
             <Route path="/css" component={CssMainPage}></Route>
             <Route path="/js" component={JSMainPage}></Route>
             <Route path="/htmlQuiz1" component={HtmlQuiz1}></Route>
+            <Route path="/totalGuide" component={TotalGuide}></Route>
           </Switch>
           </Router> 
       </div>

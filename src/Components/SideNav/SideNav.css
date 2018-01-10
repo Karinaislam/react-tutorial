@@ -1,23 +1,12 @@
 .drawer{
     height: 100px;
+    border-bottom: 5px solid #00bcd4;
+    background-image: url('../../images/curve-simplicity.jpg');
 }
 
 .menu{
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -35,7 +24,7 @@
 li{
     list-style: none;
     font-size: 18px;
-    text-align: right;
+   
 
     padding: 10px 30px 10px 10px;
 }
