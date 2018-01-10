@@ -1,3 +1,43 @@
+.totalMainPg{
+    margin-top: 70px;
+    font-family: 'Roboto', sans-serif;
+}
 
+.introTotal{
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 60px;
+}
 
+.totalHead {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00bcd4;
 
+}
+
+.flexBox{
+
+    display: flex;
+    
+}
+
+.flexContainer{
+    /* border: 1px solid black; */
+    /* height: 500px; */
+    width: 50%; 
+    margin: 10px;
+}
+
+ul li{
+    list-style-type: square;
+}
+
+li{
+    padding: 0px;
+}

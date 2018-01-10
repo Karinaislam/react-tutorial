@@ -205,7 +205,11 @@ class CssMainPage extends Component {
                  gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
               
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/B9OZkATMbag" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w" frameborder="0" 
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
                 
 
