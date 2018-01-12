@@ -21,6 +21,7 @@ class TotalGuide extends Component {
                             <li>JS Frameworks</li>
                             <li>Serverside Language</li>
                             <li>Database</li>
+                            <li>Miscellaneous</li>
                         </ul>
                         </div>
                         <div className="flexContainer">
@@ -47,6 +48,9 @@ class TotalGuide extends Component {
                     <p> Bootstrap 4, Material UI, Material Design Lite</p>
                     <p className="totalHead"> JS Frameworks</p>
                     <p >React, Angular</p>
+                    <p className="totalHead">Miscellaneous</p>
+                    <p >React, Angular</p>
+                    
                 </div>
                 </div>
             </div>
