@@ -49,7 +49,7 @@ class TotalGuide extends Component {
                     <p className="totalHead"> JS Frameworks</p>
                     <p >React, Angular</p>
                     <p className="totalHead">Miscellaneous</p>
-                    <p >React, Angular</p>
+                    <p >Best Practice, Debugging, Interview Questions, Unit Test, WebPack, Type Script, SCSS, Data URI</p>
                     
                 </div>
                 </div>
