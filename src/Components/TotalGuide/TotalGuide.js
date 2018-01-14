@@ -47,7 +47,7 @@ class TotalGuide extends Component {
                     <p className="totalHead"> CSS Frameworks</p>
                     <p> Bootstrap 4, Material UI, Material Design Lite</p>
                     <p className="totalHead"> JS Frameworks</p>
-                    <p >React, Angular</p>
+                    <p >React, Angular.........</p>
                     <p className="totalHead">Miscellaneous</p>
                     <p >Best Practice, Debugging, Interview Questions, Unit Test, WebPack, Type Script, SCSS, Data URI</p>
                     
