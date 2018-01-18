@@ -42,7 +42,7 @@ class TotalGuide extends Component {
                     <p>Tags, Attributes, Tables,Forms, FilePath, Iframe, Media</p>
                     <p className="totalHead"> CSS3</p>
                     <p>Syntax, BoxModel, Advance CSS, CSS animations, Flexbox, Media Queries, CSS Grid layout, CSS class</p>
-                    <p className="totalHead"> JavaScript............</p>
+                    <p className="totalHead"> JavaScript</p>
                     <p >Data Types, Math, Random, Date,Switch, For loop, While loop, Functions, Object Oriented programming, Functional Programming, DOM Manupulation, API, JSON, AJAX, ES2015, Arrow Function, Promise, Templete String</p>
                     <p className="totalHead"> CSS Frameworks</p>
                     <p> Bootstrap 4, Material UI, Material Design Lite</p>
