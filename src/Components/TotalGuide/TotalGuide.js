@@ -38,7 +38,7 @@ class TotalGuide extends Component {
                     </div>
 
                     <p className="totalHead"> Detail Descriptions</p>
-                    <p className="totalHead"> HTML5</p>
+                    <p className="totalHead"> HTML5...............</p>
                     <p>Tags, Attributes, Tables,Forms, FilePath, Iframe, Media</p>
                     <p className="totalHead"> CSS3</p>
                     <p>Syntax, BoxModel, Advance CSS, CSS animations, Flexbox, Media Queries, CSS Grid layout, CSS class</p>
