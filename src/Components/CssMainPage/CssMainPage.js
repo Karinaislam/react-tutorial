@@ -132,23 +132,24 @@ class CssMainPage extends Component {
             <div>
                 <div className="cssMainPageContent">
                 <div className="introCss">
+                <p className="htmlhead">Start Learning CSS </p>
                  <p > CSS (Cascading Style Sheets) allows you to create great looking web pages. 
                      S0, let's learn how does it work under the hood. </p>
                  <div>
 
                 <div className="sectionCardCss">    
-                <p className="htmlhead">Read</p>
+                <p className="htmlhead">Step 1: Read</p>
                 <p> <a  href="https://www.w3schools.com/html/default.asp">W3Schools</a> is a popular web site for learning web technologies online. 
                     It focus on simplicity and straight-forward learning. And bonus point is, it's a completely free developers resource. </p>
                 </div>
                 
                 <div className="sectionCard">
-                <p className="htmlhead">Watch Tutorials</p>
+                <p className="htmlhead">Step 2: Watch Tutorials</p>
                 <p>The biggest key to understanding CSS is understanding selectors. Selectors are what allows you
                       to target specific HTML elements and apply style to them. Learn CSS to develop your website in simple and
                      easy steps starting from basic to advanced concepts with examples including  colors, layout, and fonts etc.</p>
                      
-                     <p>Step 1: Complete this 1 hour basic HTML crash course to have a kickass start.</p>
+                     <p>First, Complete this 1 hour basic CSS crash course to have a kickass start.</p>
                      
 
                 <div className="Iframe">
@@ -156,13 +157,13 @@ class CssMainPage extends Component {
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" 
                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                <p> Step 2: Give a small quize of 5 questions and check your learing level.</p>
+                <p> Now, Give a small quize of 5 questions and check your learing level.</p>
 
                 
 
                 <div>
                 <Link to="/htmlQuiz1">
-                <RaisedButton className="quiz" label="Quiz" primary={true}  onClick={this.handleOpen} />
+                <div className="button"><RaisedButton className="quiz" label="Quiz" primary={true}  onClick={this.handleOpen} /></div>
                 </Link>
                 
                         
@@ -172,43 +173,44 @@ class CssMainPage extends Component {
 
 
 
-                <p>Step 3: Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/I9XRrlOOazo" frameborder="0" 
+                <p>Second, Complete this <a href="https://www.youtube.com/watch?v=I9XRrlOOazo">tutorials</a> to tone up your basic knowledge.</p>
+<div className="tuitorials_block">
+    
+                <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/I9XRrlOOazo" frameborder="0" 
                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7ZXsPj43heo" frameborder="0" 
+                <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/7ZXsPj43heo" frameborder="0" 
                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y8zMYaD1bz0" frameborder="0" 
+                <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/Y8zMYaD1bz0" frameborder="0" 
                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jgw82b5Y2MU" frameborder="0" 
+                <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/jgw82b5Y2MU" frameborder="0" 
                 gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/B9OZkATMbag" frameborder="0" 
+                <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/B9OZkATMbag" frameborder="0" 
                  gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w" frameborder="0"
+                 <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w" frameborder="0"
                   gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
+</div>
 
+                <p> Now, Give a small quize of 5 questions and check your learing level.</p>                          
 
-                <p> Step 4: Give a small quize of 5 questions and check your learing level.</p>                          
-
-                <RaisedButton className="quiz" label="Quiz" primary={true} />
+                <RaisedButton className="quiz button" label="Quiz" primary={true} />
 
                 <div className="sectionCard">
-                <p className="htmlhead">Learn Framework</p>
+                <p className="htmlhead">Step 3: Learn Framework</p>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/5GcQtLDGXy8" frameborder="0"
+                <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/5GcQtLDGXy8" frameborder="0"
                  gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
               
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/B9OZkATMbag" frameborder="0"
+                 <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/B9OZkATMbag" frameborder="0"
                   allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w" frameborder="0" 
+                  <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w" frameborder="0" 
                   allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
                 

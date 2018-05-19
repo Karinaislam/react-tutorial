@@ -54,3 +54,17 @@
      
      text-align: center !important;
  }
+
+ .button {
+     margin: 40px 0px,
+     
+ }
+
+ .tuitorials_block{
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .iframe{
+     width: 45%;
+ }

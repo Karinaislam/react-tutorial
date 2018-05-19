@@ -131,6 +131,7 @@ class Html extends Component {
             <div>
                 <div className="htmlMainPageContent">
                     <div className="introHtml">
+                    <p className="htmlhead">Start Learning HTML</p>
                      <p > The first step in anyone’s web coding journey is to learn HTML.
                      Starting to learn HTML doesn’t need to be expensive or scary. 
                      The best way to learn Front-end Web technologies is- </p>
@@ -139,19 +140,19 @@ class Html extends Component {
                      <div>
 
                     <div className="sectionCardHtml">    
-                    <p className="htmlhead">Read</p>
+                    <p className="htmlhead">Step 1: Read</p>
                     <p> <a  href="https://www.w3schools.com/html/default.asp">W3Schools</a> is a popular web site for learning web technologies online. 
                         It focus on simplicity and straight-forward learning. And bonus point is, it's a completely free developers resource. </p>
                     </div>
                     
                     <div className="sectionCard">
-                    <p className="htmlhead">Watch Tutorials</p>
+                    <p className="htmlhead">Step 2: Watch Tutorials</p>
                     <p>Learn HTML to develop your website in simple and
                          easy steps starting from basic to advanced concepts with examples including 
                          overview, basic tags, meta tags, attributes, formatting, phrase tags, comments, fonts, marquees, images,
                          links, tables, frames, lists, layouts, colors, forms etc.</p>
  
-                    <p>Step 1: Complete this 1 hour basic HTML crash course to have a kickass start.</p>
+                    <p>First: Complete this 1 hour basic HTML crash course to have a kickass start.</p>
  
 
                         <div className="Iframe">
@@ -159,13 +160,13 @@ class Html extends Component {
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0"
                          gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                        <p> Step 2: Give a small quize of 5 questions and check your learing level.</p>
+                        <p>Now, Give a small quize of 5 questions and check your learing level.</p>
 
                         
 
                         <div>
                         <Link to="/htmlQuiz1">
-                        <RaisedButton className="quiz" label="Quiz" primary={true}  onClick={this.handleOpen} />
+                        <div className="button"> <RaisedButton className="quiz" label="Quiz" primary={true}  onClick={this.handleOpen} /> </div>
                         </Link>
                        
                                
@@ -175,14 +176,14 @@ class Html extends Component {
 
 
 
-                        <p>Step 3: Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
+                        <p>Second: Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
 
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1BlT4_c_SU" frameborder="0" 
                         gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                        <p> Step 4: Give a small quize of 5 questions and check your learing level.</p>                          
+                        <p>Now, Give a small quize of 5 questions and check your learing level.</p>                          
 
-                        <RaisedButton className="quiz" label="Quiz" primary={true} />
+                       <div className="button"><RaisedButton className="quiz" label="Quiz" primary={true} /></div> 
 
 
                         </div>  

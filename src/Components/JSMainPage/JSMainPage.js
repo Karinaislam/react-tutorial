@@ -133,6 +133,7 @@ class JSMainPage extends Component {
             <div>
                 <div className="jsMainPageContent">
                 <div className="introJs">
+                <p className="jshead">Start Learning JavaScript</p>
                  <p > JavaScript is a programming language that allows you to 
                      implement complex things on web pages. Every time a web page
                       does more than just sit there and display static information
@@ -142,40 +143,39 @@ class JSMainPage extends Component {
                  <div>
 
                 <div className="sectionCardJs">    
-                <p className="jshead">Read</p>
+                <p className="jshead">Step 1: Read</p>
                 <p> <a  href="https://www.w3schools.com/html/default.asp">W3Schools</a> is a popular web site for learning web technologies online. 
                     It focus on simplicity and straight-forward learning. And bonus point is, it's a completely free developers resource. </p>
                 </div>
                 
                 <div className="sectionCardJs">
-                <p className="jshead">Watch Tutorials</p>
-                <p>JavaScript is arguably more difficult to learn than related technologies such as HTML and CSS. Before attempting to learn JavaScript, you are strongly advised to get familiar with at least these two technologies first, and perhaps others as well. Start by working through the following modules:
-                
-                Getting started with the Web
-                Introduction to HTML
-                Introduction to CSS</p>
-
-                <ul className="learnList">
-                <li>Getting started with the Web</li>
-                <li>Introduction to HTML</li>
-                <li>Introduction to CSS</li>
-            </ul>
+                <p className="jshead"> Step 2: Watch Tutorials</p>
+                <p>JavaScript is arguably more difficult to learn than related technologies such as HTML and CSS. Before attempting to learn JavaScript,
+                     you are strongly advised to get familiar with at least these two technologies first, and perhaps others as well. Start by working through the following modules:  </p>
+                <ul>
+                    <li>Getting started with the Web</li>
+                    <li> Introduction to HTML</li>
+                    <li> Introduction to CSS</li>
+                </ul>
+               
 
                     <div className="Iframe">
-                    <p>Step 1: Complete this 1 hour basic HTML crash course to have a kickass start.</p>
+                    <p>First, Complete this 1 hour basic HTML crash course to have a kickass start.</p>
                     
                    
                     <div className="Iframe">
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vEROU2XtPR8" frameborder="0" 
+                    <div>
+                    <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/vEROU2XtPR8" frameborder="0" 
                     gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2LeqilIw-28" frameborder="0" 
+                    <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/2LeqilIw-28" frameborder="0" 
                     gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
+                    </div>
 
 
-                    <p> Step 2: Give a small quize of 5 questions and check your learing level.</p>
+                    <p> Now, Give a small quize of 5 questions and check your learing level.</p>
 
                     
 
@@ -188,31 +188,29 @@ class JSMainPage extends Component {
                     </div>
                     
 
+                    <p>Second, Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
 
-
-
-                    <p>Step 3: Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
-
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qoSksQ4s_hg" frameborder="0" 
+                <div>
+                    <iframe className="iframe" width="560" height="315" src="https://www.youtube.com/embed/qoSksQ4s_hg" frameborder="0" 
                     gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Mp2kwE8xY0" frameborder="0" 
+                    <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/0Mp2kwE8xY0" frameborder="0" 
                     gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ANDyf6VEYHE" frameborder="0" 
+                    <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/ANDyf6VEYHE" frameborder="0" 
                     gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FIORjGvT0kk" frameborder="0" 
+                    <iframe className="iframe"  width="560" height="315" src="https://www.youtube.com/embed/FIORjGvT0kk" frameborder="0" 
                     gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                    <p> Step 4: Give a small quize of 5 questions and check your learing level.</p>                          
+                </div>
+                    <p>Now, Give a small quize of 5 questions and check your learing level.</p>                          
 
                     <RaisedButton className="quiz" label="Quiz" primary={true} />
 
 
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FIORjGvT0kk" frameborder="0"
-                     allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    
 
 
                     </div>  
