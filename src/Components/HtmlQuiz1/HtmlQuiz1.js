@@ -7,7 +7,7 @@ import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import firebase from 'firebase';
 
 const styles = {
-    
+
   margin: 20,
   horizontalAlign: 'middle',
   block: {
@@ -31,7 +31,7 @@ class Html extends Component {
         q5Answer:undefined,
         wrongAnswers: false
       };
-    
+
       handleOpen = () => {
         this.setState({open: true});
       };
@@ -39,7 +39,7 @@ class Html extends Component {
       handleOpen2 = () => {
         this.setState({open2: true});
       };
-    
+
       handleClose = () => {
         this.setState({open: false});
       };
@@ -60,6 +60,8 @@ class Html extends Component {
           var answers  = snapshot.val();
           var wrongAnswers = [];
           for(var i = 1; i <=5; i++){
+            // if we're only interested in how many answers are correct/incorrect,
+            // is there a more straightforward way to track that besides an array?
               if(answers['q'+i] != that.state['q'+i+'Answer']){
                  wrongAnswers.push(i);
               }
@@ -67,43 +69,60 @@ class Html extends Component {
           that.setState({
               wrongAnswers: wrongAnswers
           });
+          // setState is an ansynchronous function, meaning that it's possible displayResult
+          // could run before the wrongAnswers array has been updated, and that would give the wrong
+          // feedback to the user.
+          //
+          // Luckily, setState gives us a second argument to use a callback, that way we
+          // can be sure it will only run after the state has been all the way updated.
+          //
+          // this.setState({ wrongAnswers }, this.displayResult);
+          // just like that!
+          //
+          // A handy ES6 shorthand is if the key and value of an object are the same,
+          // we don't have to write them both, hence { wrongAnswers } instead of { wrongAnswers: wrongAnswers }
+          // Does the same thing, but with less typing.
+          //
           that.displayResult();
         });
       }
 
-      handleHtmlQues1 = (e,value) => 
+        // The functionality of these methods are all very similar. This could be a good opportunity
+        //   to re-use some code. Could we refactor these and the questions to all use the same function
+        //   and utilize arguments to tell the state which answer to update?
+      handleHtmlQues1 = (e,value) =>
       {
         this.setState({
             q1Answer: value
         });
-      
+
       };
 
-      handleHtmlQues2 = (e,value) => 
+      handleHtmlQues2 = (e,value) =>
       {
           this.setState({
               q2Answer: value
           });
-      
+
       };
 
-      handleHtmlQues3 = (e,value) => 
+      handleHtmlQues3 = (e,value) =>
       {
         this.setState({
             q3Answer: value
         });
-      
+
       };
 
-      handleHtmlQues4 = (e,value) => 
+      handleHtmlQues4 = (e,value) =>
       {
         this.setState({
             q4Answer: value
         });
-      
+
       };
 
-      handleHtmlQues5 = (e,value) => 
+      handleHtmlQues5 = (e,value) =>
       {
         this.setState({
             q5Answer: value
@@ -133,15 +152,23 @@ class Html extends Component {
         return (
             <div className="htmlQuiz1MainPage">
 
-           
-                
-                        
-                       
-                          <div className="questionContainer"> 
+
+
+
+
+                          <div className="questionContainer">
                           <p className="quizHead">HTML Quiz 1</p>
+                                {/*
+                                    This concept of a multiple choice question gets used several times throughout the application.
+                                    It could be a good opportunity to create a new component.
+
+                                    That idea is one of React's best strengths, taking a little bundle of functionality and making
+                                    it reusable. The less repetition, the easier the code is to reason about, and less information
+                                    you have to send 'over the wire' to your users.
+                                */}
 
                             <p>1) What is the HTML tag for a link?</p>
-                            
+
                             <RadioButtonGroup name="shipSpeed" defaultSelected="not_light" onChange={this.handleHtmlQues1}>
                                 <RadioButton
                                 value="link"
@@ -282,13 +309,15 @@ class Html extends Component {
                                 />
                                 </RadioButtonGroup>
                     </div>
-        <div className="submitButton">            
+        <div className="submitButton">
         <FlatButton label="Cancel" primary={true} onClick={this.handleClose} style={styles}/>
-      <FlatButton label="Submit" primary={true} keyboardFocused={true} onClick={this.handleSubmit}  style={styles}/> 
+      <FlatButton label="Submit" primary={true} keyboardFocused={true} onClick={this.handleSubmit}  style={styles}/>
       </div>
 
+      {/* The names here, open and open2 aren't very descriptive of what's going on, is there
+          something that explains what they're doing that could be used as the name? */}
       <Dialog
-         
+
           title="Worng Answer!!!"
           actions={actions}
           modal={false}
@@ -299,7 +328,7 @@ class Html extends Component {
         </Dialog>
 
         <Dialog
-         
+
           title="Congratulations!!!"
           actions={actions}
           modal={false}
@@ -308,9 +337,9 @@ class Html extends Component {
         >
           The actions in this window were passed in as an array of React objects.
         </Dialog>
-                        <footer className="footer"></footer>       
+                        <footer className="footer"></footer>
                         </div>
-                       
+
         );
     }
 }
