@@ -9,12 +9,12 @@ import FontIcon from 'material-ui/FontIcon';
 
 const styles = {
     margin: 1,
-    
-    
+
+
 
     button: {
         margin: 12,
-        
+
       },
       exampleImageInput: {
         cursor: 'pointer',
@@ -36,19 +36,19 @@ class SignInPage extends Component {
         open: false,
         userName: '',
         userEmail: '',
-        userToken: ''        
+        userToken: ''
       };
-    
+
       handleOpen = () => {
         this.setState({open: true});
       };
-    
+
       handleClose = () => {
         this.setState({open: false});
       };
 
       goToHomePage = () => {
-        
+
         this.props.history.push("/home");
         this.logUserLogin();
       }
@@ -75,7 +75,7 @@ class SignInPage extends Component {
             console.log(token, user.displayName, user.email, user.emailVerified);
             that.setState({
                 userName: user.displayName,
-                userEmail:user.email, 
+                userEmail:user.email,
                 userToken:user.uid
             });
 
@@ -85,7 +85,7 @@ class SignInPage extends Component {
             var errorMessage = error.message;
             var email = error.email;
             var credential = error.credential;
-            
+
           });
       }
 
@@ -104,10 +104,10 @@ class SignInPage extends Component {
             console.log(token, user.displayName, user.email, user.emailVerified);
             that.setState({
                 userName: user.displayName,
-                userEmail:user.email, 
+                userEmail:user.email,
                 userToken:user.uid
             });
-           
+
             that.goToHomePage();
 
           }).catch(function(error) {
@@ -137,10 +137,10 @@ class SignInPage extends Component {
             console.log(user);
             that.setState({
                 userName: user.displayName,
-                userEmail:user.email, 
+                userEmail:user.email,
                 userToken:user.uid
             });
-            
+
             that.goToHomePage();
 
           }).catch(function(error) {
@@ -169,15 +169,15 @@ class SignInPage extends Component {
                 </div>
 <div className="authButtons">
 
-                        
+
 <FlatButton label="Google" onClick={this.authGoogle} primary={true} labelStyle= { {fontWeight: 600,fontSize: 18,  }} style= {{ margin: 10, }} />
 <FlatButton label="GitHub" onClick={this.authGitHub} primary={true} labelStyle= { {fontWeight: 600,fontSize: 18,  }} style= {{ margin: 10, }}  />
 <FlatButton label="Twitter" onClick={this.authTwitter} primary={true} labelStyle= { {fontWeight: 600,fontSize: 18,  }}  style= {{ margin: 10, }}  />
-          
+
 
 </div>
 
-                
+
             </div>
         );
     }

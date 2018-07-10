@@ -31,11 +31,11 @@ class Html extends Component {
         q5Answer:undefined,
         wrongAnswers: false
       };
-    
+
       handleOpen = () => {
         this.setState({open: true});
       };
-    
+
       handleClose = () => {
         this.setState({open: false});
       };
@@ -52,6 +52,8 @@ class Html extends Component {
       handleSubmit =() =>{
         var database = firebase.database();
         var userId = firebase.auth().currentUser.uid;
+        // There's nothing wrong with just using this, and changing it can make
+        // things more confusing for other devs (which can mean yourself in the future too)
         var that = this;
         return firebase.database().ref('/answers/').once('value').then(function(snapshot) {
           var answers  = snapshot.val();
@@ -68,39 +70,39 @@ class Html extends Component {
         });
       }
 
-      handleHtmlQues1 = (e,value) => 
+      handleHtmlQues1 = (e,value) =>
       {
         this.setState({
             q1Answer: value
         });
-      
+
       };
 
-      handleHtmlQues2 = (e,value) => 
+      handleHtmlQues2 = (e,value) =>
       {
           this.setState({
               q2Answer: value
           });
-      
+
       };
 
-      handleHtmlQues3 = (e,value) => 
+      handleHtmlQues3 = (e,value) =>
       {
         this.setState({
             q3Answer: value
         });
-      
+
       };
 
-      handleHtmlQues4 = (e,value) => 
+      handleHtmlQues4 = (e,value) =>
       {
         this.setState({
             q4Answer: value
         });
-      
+
       };
 
-      handleHtmlQues5 = (e,value) => 
+      handleHtmlQues5 = (e,value) =>
       {
         this.setState({
             q5Answer: value
@@ -112,6 +114,8 @@ class Html extends Component {
 
 
     render() {
+      // I'm not sure I see where these are being used, are they still
+      // on this page? Or left over from something before
         const actions = [
         <FlatButton
         label="Cancel"
@@ -133,27 +137,27 @@ class Html extends Component {
                     <div className="introHtml">
                     <p className="htmlhead">Start Learning HTML</p>
                      <p > The first step in anyone’s web coding journey is to learn HTML.
-                     Starting to learn HTML doesn’t need to be expensive or scary. 
+                     Starting to learn HTML doesn’t need to be expensive or scary.
                      The best way to learn Front-end Web technologies is- </p>
-                     
+
 
                      <div>
 
-                    <div className="sectionCardHtml">    
+                    <div className="sectionCardHtml">
                     <p className="htmlhead">Step 1: Read</p>
-                    <p> <a  href="https://www.w3schools.com/html/default.asp">W3Schools</a> is a popular web site for learning web technologies online. 
+                    <p> <a  href="https://www.w3schools.com/html/default.asp">W3Schools</a> is a popular web site for learning web technologies online.
                         It focus on simplicity and straight-forward learning. And bonus point is, it's a completely free developers resource. </p>
                     </div>
-                    
+
                     <div className="sectionCard">
                     <p className="htmlhead">Step 2: Watch Tutorials</p>
                     <p>Learn HTML to develop your website in simple and
-                         easy steps starting from basic to advanced concepts with examples including 
+                         easy steps starting from basic to advanced concepts with examples including
                          overview, basic tags, meta tags, attributes, formatting, phrase tags, comments, fonts, marquees, images,
                          links, tables, frames, lists, layouts, colors, forms etc.</p>
- 
+
                     <p>First: Complete this 1 hour basic HTML crash course to have a kickass start.</p>
- 
+
 
                         <div className="Iframe">
 
@@ -162,31 +166,31 @@ class Html extends Component {
 
                         <p>Now, Give a small quize of 5 questions and check your learing level.</p>
 
-                        
+
 
                         <div>
                         <Link to="/htmlQuiz1">
                         <div className="button"> <RaisedButton className="quiz" label="Quiz" primary={true}  onClick={this.handleOpen} /> </div>
                         </Link>
-                       
-                               
+
+
                         </div>
-                       
+
 
 
 
 
                         <p>Second: Complete this <a href="https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc">17 tutorials</a> to tone up your basic knowledge.</p>
 
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1BlT4_c_SU" frameborder="0" 
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1BlT4_c_SU" frameborder="0"
                         gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-                        <p>Now, Give a small quize of 5 questions and check your learing level.</p>                          
+                        <p>Now, Give a small quize of 5 questions and check your learing level.</p>
 
-                       <div className="button"><RaisedButton className="quiz" label="Quiz" primary={true} /></div> 
+                       <div className="button"><RaisedButton className="quiz" label="Quiz" primary={true} /></div>
 
 
-                        </div>  
+                        </div>
                     </div>
 
                     <div className="sectionCard" >
@@ -195,11 +199,11 @@ class Html extends Component {
                     </div>
 
                 </div>
-                   
-                    
-                    
+
+
+
                 </div>
-                
+
                 </div>
             </div>
         );
